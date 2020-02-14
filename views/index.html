@@ -11,16 +11,50 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col m2">2 Units Wide Wide Wide</div>
-            <div class="col m8">8 Units Wide Wide Wide Wide Wide Wide Wide Wide Wide Wide Wide Wide
+            <div class="col m1"></div>
+            <div class="col m10 main-player blurred-box">
                 <div class="row">
-                    <div class="col m6" style="width: 100%;">Internal 6 Units</div>
-                    <div class="col m2"> Int 2 Units</div>
+                    <div class="col m8 s12">
+                        <p id="responseText">
+                            ----------------------------------------------------------------------------------------------------------------------------------------------------------Main Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music PlayerMain Music Player
+                        </p>
+                    </div>
+                    <div class="col m4 s12">--------------------------------------------------------------------------------------
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img src="https://lorempixel.com/100/190/nature/6">
+                            </div>
+                          
+                            <div class="card-content">
+                                <p>I am a very simple card. I am good at containing small bits of information.</p>
+                            </div>
+                        </div>
+                        <h5>The XMLHttpRequest Object</h5>
+
+<p id="demo">Let AJAX change this text.</p>
+
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+<script>
+function loadDoc(){
+	const Http = new XMLHttpRequest();
+const url='http://5dd1894f15bbc2001448d28e.mockapi.io/playlist';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  //alert(Http.responseText);
+  document.getElementById("responseText").innerHTML = Http.responseText;
+}
+}
+	
+</script>
+                    </div>
                 </div>
-                
             </div>
-            <div class="col m2">2 Units Wide Wide Wide</div>
+            <div class="col m1"></div>
         </div>
+            
     </div>
     
 </body>

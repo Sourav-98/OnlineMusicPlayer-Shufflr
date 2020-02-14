@@ -1,3 +1,25 @@
+body{
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+}
+
+.main-player{
+    width: 100%;
+    margin-top: 200px;
+}
+
+.blurred-box{
+    background-color: rgba(255, 255, 255, .1);  
+    backdrop-filter: blur(8px);
+}
+
+.card{
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(12px);
+}
+
 .col{
-    background-color: brown;
+    overflow: scroll;
 }
