@@ -1,22 +1,26 @@
 
+window.songList = undefined;
 
-
-const showplaylist = function(songList){
+const showplaylist = function(){
     var playlist = $("#playlist");
-    for(var i=0; i<songList.length; i++){
+    for(var i=0; i<window.songList.length; i++){
         playlist.append(`
             <div id="song${songList[i].id}" class="playlist-card">
-                <img class="playlist-artwork" src="${songList[i].albumCover}" alt="Sample Image">
+                <img class="playlist-artwork" src="${window.songList[i].albumCover}" alt="Sample Image">
                 <div class="playlist-card-meta">
-                    <h6>${songList[i].track}</h6>
-                    <p>${songList[i].artist}</p>
+                    <h6>${window.songList[i].track}</h6>
+                    <p>${window.songList[i].artist}</p>
                 </div>
             </div>
         `);
     }
 }
 
-const loadplayer = function(songList){
+const loadcontroller = function(){
+
+}
+
+const loadplayer = function(){
     var mainplayer = $("#player-box");
     $("#player-preloader").remove();
     mainplayer.append(`
@@ -25,7 +29,7 @@ const loadplayer = function(songList){
         <div id="playlist" class="playlist">
         </div>
     `);
-    showplaylist(songList);
+    showplaylist();
 }
 
 const loadDoc = function(){
@@ -35,11 +39,10 @@ const loadDoc = function(){
     Http.send();
     Http.onreadystatechange = (e) => {
         if(Http.readyState === 4){
-            var songList = JSON.parse(Http.responseText);
-            setTimeout(()=>{
-                console.log('API data received!');
-                loadplayer(songList);
-            }, 2000); 
+            window.songList = JSON.parse(Http.responseText);
+            console.log('API data received!');
+            loadplayer();
+             
         }  // to simulate network lag
     }
 }
