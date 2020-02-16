@@ -57,7 +57,7 @@ body{
 
   .playlist-card{
     background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(8px);
     text-align: center;
     cursor: pointer;
     margin-top: 0px;
@@ -103,7 +103,7 @@ body{
 
   .playlist-card{
     background-color: rgba(255, 255, 255, .15);  
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -155,4 +155,27 @@ body{
     font-family: "Montserrat";
     font-weight: 300;
     font-size: 10pt;
+}
+
+.main-player{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  ;
+}
+
+.main-player > img {
+  width: 300px;
+  height:300px;
+  border-radius: 5px;
+}
+
+.playlist-card:hover{
+  background-color: rgba(255, 255, 255, .25);  
+  backdrop-filter: blur(8px);
+}
+
+.playlist-card:active{
+  background-color: rgba(255, 255, 255, .25);  
 }
