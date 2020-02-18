@@ -68,8 +68,8 @@ body{
 
   .playlist-artwork{
     border-radius: inherit;
-    height: 95px;
-    width: 95px;
+    height: 100px;
+    width: 100px;
     margin-bottom: 5px;
   }
 
@@ -97,7 +97,6 @@ body{
     background-color: rgba(255, 255, 255, .1);  
     backdrop-filter: blur(8px);
   }
-  
 }
 
 /* Desktop View */
@@ -140,8 +139,8 @@ body{
   }
   .playlist-artwork{
     border-radius: inherit;
-    height: 90px;
-    width: 90px;
+    height: 100px;
+    width: 100px;
     margin-right: 5px;
   }
 
@@ -210,7 +209,7 @@ body{
 }
 
 progress{
-  /* margin-top: 10px; */
+  margin-top: 0px;
   width: 100%;
   cursor: pointer;
 }
@@ -221,12 +220,20 @@ progress{
 }
 
 .playback-controls{
-  display: flex;
+  display: inline-flex ;
+  /* border: 1px solid white;
+  height: 60px;
+  padding: auto; */
+  /* display: inline-block; */
+  /* display: table-cell;
+  vertical-align: middle */
 }
 
 h4{
   font-family: "Montserrat";
   font-weight: 600;
+  text-align: center;
+  font-size: 21px;
 }
 
 p{
@@ -234,3 +241,22 @@ p{
   font-weight: 300;
   font-size: 12pt;
 }
+
+
+.controls{
+  margin: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: transform .1s;
+  padding: 5px;
+}
+
+.controls:hover{
+  transform: scale(1.1);
+}
+
+.controls:active{
+  color: rgba(200, 200, 200, 1);
+}
+
+
