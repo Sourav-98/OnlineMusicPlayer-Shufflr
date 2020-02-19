@@ -7,17 +7,17 @@ var repeatCurrent = false;
 const loadDoc = function(){
     const Http = new XMLHttpRequest();
     const url='https://5dd1894f15bbc2001448d28e.mockapi.io/playlist';
-    console.log("Initial: "+Http.readyState);
+//     console.log("Initial: "+Http.readyState);
     Http.open("GET", url);
-    console.log("After open(): "+Http.readyState);
+//     console.log("After open(): "+Http.readyState);
     Http.send();
-    console.log("After send(): "+Http.readyState);
+//     console.log("After send(): "+Http.readyState);
     Http.onreadystatechange = (e) => {
-        console.log("before parsing data: "+Http.readyState);
+//         console.log("before parsing data: "+Http.readyState);
         if(Http.readyState === 4){
             window.songList = JSON.parse(Http.responseText);
             window.songList.splice(songList.length-1, 1);
-            console.log('API data received!');
+//             console.log('API data received!');
             loadplaylist();
         }
     }
@@ -30,7 +30,7 @@ const shuffle = function(arg){
 
 // generates a random song file except the current one being played
 const shuffleNext = function(current){
-    console.log('Shuffle Next');
+//     console.log('Shuffle Next');
     var nextList = songList.filter(s => s.id != current);
     var nextsong =  shuffle(nextList);
     loadmusic(nextsong.id);
@@ -126,7 +126,7 @@ const loadmusic = function(song_id){
     
     var audio = document.getElementById('audioplayer');
     var playpausebutton = document.getElementById('playpausemusic');
-    console.log(audio.paused);
+//     console.log(audio.paused);
 }
 
 
@@ -143,7 +143,7 @@ const Pause = function(){
 const PlayPause = function(){
     var audio = document.getElementById('audioplayer');
     var playpausebutton = document.getElementById('playpausemusic');
-    console.log(audio.paused);
+//     console.log(audio.paused);
     if (audio.paused){
         Play();
         // playpausebutton.setAttribute("class", "controls far fa-pause-circle fa-3x");
