@@ -9,5 +9,5 @@ app.get('/', (req, res)=>{
     res.sendFile(__dirname+'/views/index.html');
 });
 
-app.listen(8080);
+app.listen(8080, 'localhost');
 
