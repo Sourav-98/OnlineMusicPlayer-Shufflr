@@ -15,8 +15,6 @@ A Dumi Online Music Player with basic controls like Shuffle and Play Loop.
 
 ## Screenshots - Desktop and Mobile View
 
-![desktop-view]
-(https://github.com/Sourav-98/OnlineMusicPlayer-Shufflr/blob/master/screenshots/sc_desktop.png)
+![desktop-view](screenshots/sc_desktop.png)
 
-![mobile-view]
-(https://github.com/Sourav-98/OnlineMusicPlayer-Shufflr/blob/master/screenshots/sc_mobile.png)
+![mobile-view](screenshots/sc_mobile.png)
