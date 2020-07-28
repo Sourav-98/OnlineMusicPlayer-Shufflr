@@ -13,8 +13,6 @@ A Dumi Online Music Player with basic controls like Shuffle and Play Loop.
 4. Open your browser and go to `http://localhst:8080` to view the application
 	> Note: Music playback will take time, so be patient.
 
-## Screenshots - Desktop and Mobile View
+## Preview
 
-![desktop-view](screenshots/sc_desktop.png)
-
-![mobile-view](screenshots/sc_mobile.png)
+https://sourav-98.github.io/OnlineMusicPlayer-Shufflr/
