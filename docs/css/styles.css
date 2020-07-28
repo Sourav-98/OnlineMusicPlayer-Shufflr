@@ -1,0 +1,250 @@
+.loader {
+  border: 16px solid #f3f3f3;
+  border-color: rgba(255, 255, 255, .1);
+  border-top: 16px solid #80aaff;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ 
+body{
+    background-image: url('https://wallpaperaccess.com/full/5113.jpg');
+    /* background-image: url('https://www.itl.cat/pngfile/big/222-2226827_4k-wallpaper-abstract.jpg'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Frosted Glass Effect */
+.blurred-box{
+  background-color: rgba(255, 255, 255, .1);  
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Mobile View */
+@media only screen and (max-width: 909px){
+  .main-player{
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    width: 90%;
+    height: 64.5%;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .playlist{
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    width: 90%;
+    height: 29%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-bottom: 5px;
+  }
+
+  .playlist-card{
+    text-align: center;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .playlist-artwork{
+    border-radius: inherit;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+
+  .loader {
+    border: 12px solid #f3f3f3;
+    border-color: rgba(255, 255, 255, .1);
+    border-top: 12px solid #80aaff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 1s linear infinite;
+  }
+
+  .player-preloader{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 910px){ 
+
+  .main-player{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 51.5%;
+    height: 80%;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  
+  .playlist{
+    position: absolute;
+    top: 10%;
+    left: 62%;
+    width: 28%;
+    height: 80%;
+    padding-right: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .playlist-card{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .playlist-artwork{
+    border-radius: inherit;
+    height: 100px;
+    width: 100px;
+    margin-right: 5px;
+  }
+
+  .player-preloader{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
+
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+  }
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 0 rgba(255, 255, 255, .5);
+}
+
+.playlist-card-meta > h6{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 12pt;
+}
+
+.playlist-card-meta > p{
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 10pt;
+}
+
+.main-player{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.main-player > img {
+  width: 300px;
+  height:300px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.playlist-card:hover{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.playlist-card:active{
+  background-color: rgba(255, 255, 255, .5);  
+}
+
+progress{
+  margin-top: 0px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.playback-controls > button{
+  margin-left: 10px;
+  margin-left: 10px;
+}
+
+.playback-controls{
+  display: inline-flex ;
+  /* border: 1px solid white;
+  height: 60px;
+  padding: auto; */
+  /* display: inline-block; */
+  /* display: table-cell;
+  vertical-align: middle */
+}
+
+h4{
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-align: center;
+  font-size: 21px;
+}
+
+p{
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 12pt;
+}
+
+
+.controls{
+  margin: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: transform .1s;
+  padding: 5px;
+}
+
+.controls:hover{
+  transform: scale(1.1);
+}
+
+.controls:active{
+  color: rgba(200, 200, 200, 1);
+}
+
+
