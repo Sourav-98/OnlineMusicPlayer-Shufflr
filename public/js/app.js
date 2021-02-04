@@ -6,7 +6,8 @@ var repeatCurrent = false;
 
 const loadDoc = function(){
     const Http = new XMLHttpRequest();
-    const url='https://5dd1894f15bbc2001448d28e.mockapi.io/playlist';
+    // const url='https://5dd1894f15bbc2001448d28e.mockapi.io/playlist';
+    const url = "https://shufflr-heroku-api.herokuapp.com/load_playlist";
 //     console.log("Initial: "+Http.readyState);
     Http.open("GET", url);
 //     console.log("After open(): "+Http.readyState);
@@ -16,7 +17,7 @@ const loadDoc = function(){
 //         console.log("before parsing data: "+Http.readyState);
         if(Http.readyState === 4){
             window.songList = JSON.parse(Http.responseText);
-            window.songList.splice(songList.length-3, 3);
+            // window.songList.splice(songList.length, 3);
 //             console.log('API data received!');
             loadplaylist();
         }
