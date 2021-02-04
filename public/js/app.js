@@ -16,7 +16,7 @@ const loadDoc = function(){
 //         console.log("before parsing data: "+Http.readyState);
         if(Http.readyState === 4){
             window.songList = JSON.parse(Http.responseText);
-            window.songList.splice(songList.length-2, 2);
+            window.songList.splice(songList.length-3, 3);
 //             console.log('API data received!');
             loadplaylist();
         }
