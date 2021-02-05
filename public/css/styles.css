@@ -14,7 +14,7 @@
 }
  
 body{
-    background-image: url('https://wallpaperaccess.com/full/5113.jpg');
+    background-image: url('./../assets/bg_1.jpg');
     /* background-image: url('https://www.itl.cat/pngfile/big/222-2226827_4k-wallpaper-abstract.jpg'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
